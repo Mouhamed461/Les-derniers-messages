@@ -1,0 +1,36 @@
+@import "tailwindcss";
+@import "./base.css";
+@import "./boutons.css";
+@import "./composants.css";
+@import "./scenes.css";
+
+@theme {
+  --font-bangers:       "Bangers", cursive;
+  --font-special-elite: "Special Elite", serif;
+  --font-nunito-sans:   "Nunito Sans", sans-serif;
+
+  --color-dark:   #1A0933;
+  --color-dark2:  #240D45;
+  --color-purple: #6A0DAD;
+  --color-lpurp:  #B388FF;
+  --color-teal:   #00D4AA;
+  --color-yellow: #FFE03D;
+  --color-orange: #FF8C42;
+  --color-red:    #FF3C64;
+  --color-text:   #E8E0F5;
+  --color-dim:    #9B8DB5;
+}
+
+/* @keyframes restent ici — @apply ne peut pas définir des animations nommées */
+@keyframes pd {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.2); }
+}
+@keyframes pr {
+  0%, 100% { transform: scale(1); opacity: .5; }
+  50%       { transform: scale(1.45); opacity: 0; }
+}
+@keyframes py {
+  0%, 100% { box-shadow: 0 0 0 0 rgb(255 224 61 / .4); }
+  50%       { box-shadow: 0 0 0 8px rgb(255 224 61 / 0); }
+}

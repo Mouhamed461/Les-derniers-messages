@@ -1,0 +1,33 @@
+# Dépendances
+node_modules/
+
+# Build Vite
+dist/
+
+# Fichiers Claude Code
+.claude/
+
+# Notes internes générées par Claude
+DIRECTIVES.md
+ETAT_DU_PROJET.md
+GUIDE_POLICES.md
+
+# Système d'exploitation
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Éditeurs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Variables d'environnement
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*

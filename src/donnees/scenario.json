@@ -1,0 +1,192 @@
+{
+  "codeCadenas": "642",
+  "motsClesDeblocage": ["balthazar", "ombre", "folle", "instable", "peur", "lucas", "autorité"],
+
+  "objets": {
+    "journal": {
+      "zone": "chambre",
+      "nom": "Journal intime",
+      "description": "Un journal à couverture noire, les pages gondolées. Les dernières semaines y sont décrites avec une précision troublante.",
+      "indice": "→ Chloé décrit des humiliations répétées organisées par quelqu'un en position d'autorité. Elle parle de « lui » comme d'une ombre.",
+      "estCle": true,
+      "debloqueZone": "chambre",
+      "dialogueInitial": "Elle l'écrivait à la main. Chaque soir.",
+      "dialogueApreExamen": "...c'est pas de la sensibilité. C'est de la peur.",
+      "estCache": false
+    },
+    "photo": {
+      "zone": "chambre",
+      "nom": "Photo déchirée",
+      "description": "Une photo de classe. Nathan est entouré au stylo rouge. La moitié est déchirée — on ne voit plus Chloé.",
+      "indice": "→ Nathan savait. Il choisissait de garder le silence pour ne pas perdre la faveur de Balthazar.",
+      "estCle": false,
+      "debloqueZone": null,
+      "dialogueInitial": "Nathan était son ami. Ou je croyais.",
+      "dialogueApreExamen": "Il savait. Et il a rien dit.",
+      "estCache": false
+    },
+    "note": {
+      "zone": "chambre",
+      "nom": "Note cachée",
+      "description": "Glissée derrière la plinthe, une note manuscrite froissée. L'encre est tremblée.",
+      "indice": "→ « Il a dit que si je parlais, tout le monde me croirait folle. Que sa parole vaut plus que la mienne. » Balthazar est nommé.",
+      "estCle": true,
+      "debloqueZone": null,
+      "dialogueInitial": "Elle l'a caché là. Pour que personne ne trouve.",
+      "dialogueApreExamen": "...c'est lui. C'est Balthazar.",
+      "estCache": true,
+      "conditionReveler": "journal"
+    },
+    "mot": {
+      "zone": "casier",
+      "nom": "Mot de Sergio",
+      "description": "Un billet plié en quatre signé « S. ». Sergio écrit à Chloé pour s'excuser sans vraiment expliquer pourquoi.",
+      "indice": "→ Sergio était impliqué dans les réunions forcées. Il en était honteux mais n'a pas osé refuser.",
+      "estCle": false,
+      "debloqueZone": null,
+      "dialogueInitial": "Sergio... il était au courant.",
+      "dialogueApreExamen": "Il a griffonné quelque chose au dos... 6·4·2. Une date ? Un code ?",
+      "estCache": false
+    },
+    "rapport": {
+      "zone": "casier",
+      "nom": "Rapport scolaire",
+      "description": "Un bulletin annoté à la main avec des commentaires inhabituels. La signature de Balthazar apparaît plusieurs fois.",
+      "indice": "→ Balthazar utilisait les notes comme levier de chantage académique. « Coopère ou ta moyenne en prend un coup. »",
+      "estCle": true,
+      "debloqueZone": "casier",
+      "dialogueInitial": "Il annotait les bulletins à la main.",
+      "dialogueApreExamen": "Il la tenait par les notes. Un chantage parfait.",
+      "estCache": false
+    },
+    "agenda": {
+      "zone": "casier",
+      "nom": "Agenda caché",
+      "description": "Un agenda glissé sous le fond amovible du casier. Des rendez-vous marqués en rouge, toujours hors des heures de cours.",
+      "indice": "→ Des RDV forcés avec Balthazar, hors du lycée. Dernier rendez-vous : la veille de sa mort.",
+      "estCle": true,
+      "debloqueZone": null,
+      "dialogueInitial": "Des RDV hors du lycée. Qui fait ça ?",
+      "dialogueApreExamen": "La veille de sa mort. La veille...",
+      "estCache": true,
+      "conditionReveler": "cadenas"
+    }
+  },
+
+  "conversations": {
+    "jade": {
+      "nom": "Jade",
+      "couleur": "#B388FF",
+      "couleurTexte": "#1a0033",
+      "messages": [
+        { "de": "jade",  "texte": "T'es vraiment trop sensible Chloé. Tout le monde le pense.", "date": "Il y a 3 semaines" },
+        { "de": "chloe", "texte": "Jade, pourquoi tu dis ça ? J'ai rien fait..." },
+        { "de": "jade",  "texte": "Balthazar a raison sur toi. T'en prends vraiment pas compte, hein." },
+        { "de": "jade",  "texte": "Oublie cette conversation." }
+      ],
+      "indice": "→ Jade répète les mots de Balthazar mot pour mot. Elle était son relais au sein du groupe.",
+      "estCle": false,
+      "debloqueZone": null,
+      "estVerrouille": false
+    },
+    "nathan": {
+      "nom": "Nathan",
+      "couleur": "#FF8C42",
+      "couleurTexte": "#1a0033",
+      "messages": [
+        { "de": "nathan", "texte": "Je sais ce qui se passe. Mais tu dois faire ce qu'il dit.", "date": "Il y a 2 semaines" },
+        { "de": "chloe",  "texte": "Nathan je t'en supplie, aide-moi. Tu sais ce qu'il fait." },
+        { "de": "nathan", "texte": "Pour ton bien, Chloé. Fais ce qu'il dit. Ça finira par passer." },
+        { "de": "nathan", "texte": "Je peux plus parler de ça." }
+      ],
+      "indice": "→ Nathan savait et a choisi le silence. Il protégeait sa propre situation au détriment de Chloé.",
+      "estCle": false,
+      "debloqueZone": null,
+      "estVerrouille": false
+    },
+    "sergio": {
+      "nom": "Sergio",
+      "couleur": "#00D4AA",
+      "couleurTexte": "#062a20",
+      "messages": [
+        { "de": "sergio", "texte": "Chloé... je suis désolé. Je savais pas ce que ça deviendrait.", "date": "Il y a 10 jours" },
+        { "de": "chloe",  "texte": "Tu étais là Sergio. T'aurais pu dire quelque chose." },
+        { "de": "sergio", "texte": "J'avais peur. Il nous tenait tous. Tu comprends ça ?" }
+      ],
+      "indice": "→ Sergio confirme que Balthazar « tenait » les élèves. Un réseau de pression organisé.",
+      "estCle": false,
+      "debloqueZone": null,
+      "estVerrouille": false
+    },
+    "balthazar": {
+      "nom": "Mr. Balthazar",
+      "couleur": "#FF3C64",
+      "couleurTexte": "#fff",
+      "messages": [
+        { "de": "balth", "texte": "Notre prochaine réunion est confirmée pour jeudi. Salle B12. Sois ponctuelle.", "date": "Il y a 8 jours" },
+        { "de": "chloe", "texte": "Je ne veux plus venir. S'il vous plaît." },
+        { "de": "balth", "texte": "Ce n'est pas une invitation, Chloé. C'est une obligation. Tu connais les conséquences." }
+      ],
+      "indice": "→ Balthazar est explicitement menaçant. Ce message seul constitue une preuve de harcèlement.",
+      "estCle": true,
+      "debloqueZone": "messagerie",
+      "estVerrouille": false
+    },
+    "brouillons": {
+      "nom": "Brouillons",
+      "couleur": "#6A0DAD",
+      "couleurTexte": "#fff",
+      "messages": [
+        { "de": "brou", "texte": "Je voulais tout dire. Mais j'avais trop peur. M. Balthazar m'a dit que personne ne me croirait. Que j'étais instable. Il a utilisé mes notes, mes absences, mes rendez-vous pour me piéger.\n\nJade répétait ses mots. Nathan gardait le silence. Sergio savait et se taisait. Et moi, j'étais seule.\n\nSi tu lis ça un jour... Lucas... c'est lui. C'est toujours lui.", "date": "Message non envoyé — il y a 6 jours" }
+      ],
+      "indice": "→ PREUVE DÉCISIVE : Chloé désigne Balthazar nommément dans ce brouillon non envoyé.",
+      "estCle": true,
+      "debloqueZone": null,
+      "estVerrouille": true
+    }
+  },
+
+  "suspects": [
+    {
+      "id": "jade",
+      "nom": "JADE",
+      "couleurFond": "rgba(179,136,255,.17)",
+      "description": "La meilleure amie. Toujours présente, toujours là."
+    },
+    {
+      "id": "nathan",
+      "nom": "NATHAN",
+      "couleurFond": "rgba(255,140,66,.17)",
+      "description": "L'ex petit ami. Jaloux et imprévisible."
+    },
+    {
+      "id": "balthazar",
+      "nom": "M. BALTHAZAR",
+      "couleurFond": "rgba(255,60,100,.17)",
+      "description": "Le professeur. Charismatique et manipulateur."
+    }
+  ],
+
+  "fins": {
+    "A": {
+      "titre": "COUPABLE ARRÊTÉ",
+      "type": "good",
+      "paragraphes": [
+        "Après des semaines d'investigation acharnée, Lucas a finalement découvert la vérité. M. Balthazar, le professeur charismatique admiré de tous, était au centre d'un réseau de manipulation et de contrôle.",
+        "Les trois indices — la note cachée, l'agenda modifié, et le brouillon non envoyé — ont permis de reconstituer les derniers jours de Chloé. Elle avait découvert les agissements de Balthazar et menaçait de tout révéler.",
+        "La police a arrêté M. Balthazar devant l'école, sous les yeux de tous ceux qui l'admiraient. Lucas a enfin trouvé la paix, sachant que justice a été rendue pour Chloé.",
+        "Parfois, les prédateurs se cachent derrière les masques les plus respectables."
+      ]
+    },
+    "B": {
+      "titre": "MAUVAISE ACCUSATION",
+      "type": "bad",
+      "paragraphes": [
+        "Lucas s'est trompé. Dans sa précipitation, il a accusé {suspect} sur des bases insuffisantes.",
+        "Les indices qu'il croyait décisifs l'ont mené sur une fausse piste. Le véritable responsable reste libre, et la vérité sur la mort de Chloé demeure enfouie.",
+        "Deux semaines plus tard, Lucas découvre que M. Balthazar vient d'être promu directeur de l'école. Une affiche annonce sa nomination avec fierté.",
+        "La vérité est parfois plus difficile à trouver qu'on ne le pense."
+      ]
+    }
+  }
+}

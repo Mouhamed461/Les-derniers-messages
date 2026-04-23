@@ -1,0 +1,8 @@
+html, body, #root {
+  @apply w-full h-full overflow-hidden bg-dark text-text font-nunito-sans relative;
+}
+
+
+::-webkit-scrollbar       { width: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { @apply bg-purple/40 rounded-sm; }

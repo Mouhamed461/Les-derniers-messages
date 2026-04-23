@@ -1,0 +1,55 @@
+/* Bouton principal jaune — coin coupé via clip-path */
+.bp {
+  @apply flex items-center gap-[10px] bg-yellow text-[#1a0033];
+  @apply font-bangers text-base tracking-[2px] py-3 px-6 border-0 cursor-pointer;
+  @apply [clip-path:polygon(0_0,calc(100%_-_8px)_0,100%_8px,100%_100%,8px_100%,0_calc(100%_-_8px))];
+  @apply transition-[transform,box-shadow] duration-150;
+}
+.bp:hover {
+  @apply -translate-y-0.5 shadow-[0_6px_20px_rgb(255_224_61_/_0.4)];
+}
+
+.bs {
+  @apply bg-transparent text-lpurp font-bangers text-base tracking-[2px];
+  @apply py-3 px-6 border-2 border-lpurp cursor-pointer transition-colors duration-200;
+}
+.bs:hover { @apply bg-lpurp/10; }
+
+.be {
+  @apply bg-purple/28 border border-purple/50 text-text;
+  @apply font-bangers text-[13px] tracking-[2px] p-[10px] cursor-pointer transition-colors duration-200;
+}
+.be:hover { @apply bg-purple/52; }
+
+.ba {
+  @apply bg-teal border-0 text-[#062a20] font-bangers text-[13px] tracking-[2px];
+  @apply p-[10px] cursor-pointer transition-opacity duration-200;
+}
+.ba:hover    { @apply opacity-[0.83]; }
+.ba:disabled { @apply bg-teal/26 cursor-default opacity-[0.58]; }
+
+.bl {
+  @apply bg-red border-0 text-white font-bangers text-[13px] tracking-[2px];
+  @apply p-3 cursor-pointer transition-opacity duration-200 text-center;
+}
+.bl:hover { @apply opacity-[0.83]; }
+
+.bret {
+  @apply bg-purple/28 border border-purple/50 text-text;
+  @apply font-bangers text-[12px] tracking-[2px] py-[7px] px-[15px] cursor-pointer transition-colors duration-200 whitespace-nowrap;
+}
+.bret:hover { @apply bg-purple/52; }
+
+.bpl {
+  @apply bg-transparent border-2 border-red text-red;
+  @apply font-bangers text-[15px] tracking-[3px] py-[11px] px-7 cursor-pointer transition-all duration-200;
+}
+.bpl:hover:not(:disabled) { @apply bg-red text-white; }
+.bpl:disabled              { @apply opacity-[0.32] cursor-not-allowed; }
+
+/* Bouton discret utilisé dans l'écran de fin */
+.bf {
+  @apply bg-purple/26 border border-purple/48 text-text;
+  @apply font-bangers text-[13px] tracking-[2px] py-[10px] px-5 cursor-pointer transition-colors duration-200;
+}
+.bf:hover { @apply bg-purple/52; }
