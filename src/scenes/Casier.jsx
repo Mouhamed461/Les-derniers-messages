@@ -66,7 +66,7 @@ export default function Casier() {
       <div className={`l-main ${objetOuvert ? 'po' : ''}`}>
         <div className="l-scene">
           <img
-            src="/sources/assets/images/decors/Casier.png"
+            src={`${import.meta.env.BASE_URL}sources/assets/images/decors/Casier.png`}
             alt="Le casier au lycée"
             className="absolute inset-0 w-full h-full object-cover"
           />

@@ -81,7 +81,7 @@ export default function Chambre() {
         <div className="l-scene">
           <div className="ch-room">
             <img
-              src="/sources/assets/images/decors/La-chambre-de-chloe.png"
+              src={`${import.meta.env.BASE_URL}sources/assets/images/decors/La-chambre-de-chloe.png`}
               alt="La chambre de Chloé"
               className="w-full h-full object-cover"
             />
