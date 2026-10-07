@@ -83,6 +83,21 @@ function ZoneDepot({ suspect, chipSelectionne, onAssignerParClic }) {
   )
 }
 
+// ── Portrait : image du personnage, ou initiale si l'image est absente ───
+// Déposer le fichier dans public/sources/assets/images/suspects/<id>.png
+function PortraitSuspect({ suspect }) {
+  const [absent, setAbsent] = useState(false)
+  if (absent) return <span className="susp-initiale">{suspect.nom.replace(/^M.s*/, '')[0]}</span>
+  return (
+    <img
+      className="susp-portrait"
+      src={`${import.meta.env.BASE_URL}sources/assets/images/suspects/${suspect.id}.png`}
+      alt={suspect.nom}
+      onError={() => setAbsent(true)}
+    />
+  )
+}
+
 // ── Bloc suspect avec animation flottante ───────────────────────────────────
 function BlocSuspect({ suspect, chipSelectionne, onAssignerParClic, delaiAnim }) {
   const { assignations } = useJeu()
@@ -101,7 +116,7 @@ function BlocSuspect({ suspect, chipSelectionne, onAssignerParClic, delaiAnim })
           style={{ background: suspect.couleurFond }}
           whileHover={{ scale: 1.1 }}
         >
-          {suspect.emoji}
+          <PortraitSuspect suspect={suspect} />
         </motion.div>
         <div className="susp-info">
           <div className="susp-nm">{suspect.nom}</div>

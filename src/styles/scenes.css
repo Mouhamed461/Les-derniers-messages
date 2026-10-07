@@ -197,7 +197,9 @@
 .ch-suspects { @apply py-5 px-7 overflow-y-auto flex flex-col gap-[18px]; }
 .susp-block  { @apply bg-dark/55 border border-purple/35 p-4; }
 .susp-top    { @apply flex items-center gap-[14px] mb-[14px]; }
-.susp-emo    { @apply text-[36px] w-[52px] h-[52px] flex items-center justify-center flex-shrink-0 rounded-[3px]; }
+.susp-emo    { @apply text-[36px] w-[72px] h-[72px] flex items-center justify-center flex-shrink-0 rounded-[3px] overflow-hidden; }
+.susp-portrait { @apply w-full h-full object-cover; }
+.susp-initiale { @apply font-bangers text-[34px] text-white/80; }
 .susp-info   { @apply flex-1; }
 .susp-nm     { @apply font-bangers text-xl tracking-[1px]; }
 .susp-desc   { @apply text-[10px] text-dim leading-[1.5]; }
